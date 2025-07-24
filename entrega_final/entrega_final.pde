@@ -1,28 +1,39 @@
 import processing.sound.*;
 
+// Lista de nombres de los destinos disponibles
 String[] destinos = {"PARIS", "BALI", "TOKIO"};
 
+// Colores de fondo para los botones de cada destino
 color[] coloresBotones = {
   color(198, 228, 246),
   color(211, 103, 58),
   color(20, 20, 80)
 };
 
+// Colores del texto en los botones de cada destino
 color[] coloresTexto = {
   color(87, 122, 176),
   color(252, 223, 202),
   color(242, 104, 137)
 };
 
+// Estado actual de la aplicación:
+// 0 = pantalla de inicio
+// 1 = pantalla de muneca por destino
+// 2 = pantalla de outfit final
 int pantalla = 0;
+
+// Guarda el destino y el outfit seleccionados por el usuario
 String destinoSeleccionado = "";
 String outfitSeleccionado = "";
 
+// Imágenes de fondo y outfits
 PImage paris, bali, tokio;
 PImage paris1, paris2, paris3;
 PImage bali1, bali2, bali3;
 PImage tokio1, tokio2, tokio3;
 
+// Arreglos para los elementos que se reutilizan
 BotonDestino[] botones = new BotonDestino[3];
 Muneca[] munecas = new Muneca[3];
 Outfit[] outfits = new Outfit[9];
